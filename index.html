@@ -8,28 +8,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <section class="first_section header">
+    
+
+    <header class="header">
         <div class="container">
             <div class="row">
-                
-                    <div class="col-sm-3">
-                        <img src="img/logo-search-grid-2x__1_-removebg-preview.png">
-                    </div>
-
-                    <div class="col-sm-6 ">
-                        <ul class="nav">
-                            <li href="#">Home</li>
-                            <li href="#">About Us</li>
-                            <li href="#">Services</li>
-                            <li href="#">Portfolio</li>
-                            <li href="#">Contact Us</li>
-                        </ul>
-                    </div>
-
-                    <div class="col-sm-3 butn_cls">Get in Touch</div>
-                
-            </div>
+                <div class="col-sm-3">
+            <img src="img/logo-search-grid-2x__1_-removebg-preview.png">
+            <div class="menu-btn" onclick="openMenu()">☰</div>
         </div>
-    </section>
+             <div class="col-sm-6">  
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        </div>
+
+        <div class="col-sm-3"><a href="tel:9358574355">+91 9358574355</a>Contact Us</div>
+    </div>
+    </div>
+      </header>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#services" onclick="closeMenu()">Services</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+      </div>
+    
+
+      <script>
+        function openMenu() {
+          document.getElementById("mobileMenu").style.left = "0";
+        }
+    
+        function closeMenu() {
+          document.getElementById("mobileMenu").style.left = "-100%";
+        }
+      </script>
+
 </body>
 </html>
