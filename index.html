@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
 
 </head>
 <body>
@@ -23,23 +25,23 @@
         </div>
              <div class="col-sm-6">  
         <nav class="nav">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="#contact">Contact</a>
+            <a href="index.html">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#service">Service</a>
+            <a href="#contact">Contact Us</a>
         </nav>
         </div>
 
-        <div class="col-sm-3 butn"><a class="btn" href="tel:9358574355">Contact Us</a></div>
+        <div class="col-sm-3 butn"><a class="btn" href="tel:9509188012">Contact Us</a></div>
     </div>
     </div>
       </header>
 
       <div class="mobile-menu" id="mobileMenu">
         <span class="close-btn" onclick="closeMenu()">×</span>
-        <a href="#home" onclick="closeMenu()">Home</a>
+        <a href="index.html" onclick="closeMenu()">Home</a>
         <a href="#about" onclick="closeMenu()">About</a>
-        <a href="#services" onclick="closeMenu()">Services</a>
+        <a href="#service" onclick="closeMenu()">Services</a>
         <a href="#contact" onclick="closeMenu()">Contact</a>
       </div>
     
@@ -49,7 +51,7 @@
         <div class="slider">
       
           <div class="slide active">
-            <img src="img/banner3.png">
+            <img src="img/hero2.webp">
             <div class="overlay"></div>
             <div class="content">
               <h1>Creative design, as per your choice.</h1>
@@ -59,7 +61,7 @@
           </div>
       
           <div class="slide">
-            <img src="img/banner3.png">
+            <img src="img/hero1.webp">
             <div class="overlay"></div>
             <div class="content">
               <h1>The website of your dreams, with us!</h1>
@@ -85,75 +87,137 @@
       </section>
       <!-- ===end banner section=========== -->
 
+      <section id="about" class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>About Us</h2>
+                    <p>Zero2Logics is a digital solutions company focused on transforming ideas from concept to execution through smart design and logical development. We help businesses build strong, reliable, and scalable digital experiences that are not only visually appealing but also purpose-driven and performance-focused.</p>
+                    <p>We believe that every successful digital product starts with clear logic. That’s why our approach combines creativity, technology, and strategy to deliver solutions that support real business growth.</p>
+                    <div class="row gapcls">
+                        <div class="col-sm-5 bxd">
+                            <h4>Our Mission</h4>
+                            <p>At Zero2Logics, our mission is to help businesses turn ideas into reliable, scalable, and meaningful digital solutions. </p>
+                        </div>
+
+                        <div class="col-sm-5 bxd">
+                            <h4 class="vision">Our Vision</h4>
+                            <p>Our vision is to empower businesses, startups, and entrepreneurs with digital solutions that are simple, effective, and future-ready. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 bgcls"></div>
+            </div>
+        </div>
+      </section>
+
+
+      <!-- ======service===== -->
+       <section id="service" class="services">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Our Services</h2>
+            <div class="row">
+                <div class="col-sm-12">
+                    <img src="img/Custom Website Design.png">
+                    <h4>Custom Website Design</h4>
+                    <p>We create fully custom website designs tailored to your brand identity, business goals, and target audience—no templates, only unique designs.</p>
+                </div>
+                <div class="col-sm-12">
+                    <img src="img/Responsive Web Design.png">
+                    <h4>Responsive Web Design</h4>
+                    <p>Your website will look perfect on all devices including mobiles, tablets, and desktops, ensuring a smooth user experience everywhere.</p>
+                </div>
+                <div class="col-sm-12">
+                    <img src="img/Landing Page Design.png">
+                    <h4>Landing Page Design</h4>
+                    <p>High-converting landing pages designed for marketing campaigns, lead generation, and product promotions.</p>
+                </div>
+
+                <div class="col-sm-12">
+                    <img src="img/WordPress Development.png">
+                    <h4>WordPress Development</h4>
+                    <p>Custom WordPress websites that are easy to manage, flexible, and optimized for performance.</p>
+                </div>
+
+
+                <div class="col-sm-12">
+                    <img src="img/ Content Upload & Management.png">
+                    <h4>Content Upload & Management</h4>
+                    <p>We help upload, format, and manage website content such as text, images, and pages professionally.</p>
+                </div>
+
+
+                <div class="col-sm-12">
+                    <img src="img/Website Deployment & Hosting Setup.png">
+                    <h4>Website Deployment & Hosting Setup</h4>
+                    <p>Complete website deployment including hosting setup, domain connection, and live server configuration.</p>
+                </div>
+            </div>
+
+        </div>
+       </section>
+
       <!-- ===testimonial=== -->
       
 
-      <section id="testimonial-slider" class="splide">
+      <section id="testimonial-slider">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">What People Are Saying!</h2>
+        <div class="row">
         
-        <h2 style="text-align: center; margin-bottom: 40px;">What People Are Saying!</h2>
+        <div id="splide" class="splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+        
+                <li class="splide__slide">
+                  <div class="slide-card">
+                    <img src="img/boy.png" alt="boy icon">
+                    <h3>Arjun Mehta</h3>
+                    <p>The team at Zero2Logics exceeded our expectations. Our WordPress website is modern, fast, and fully responsive. Truly professional work!</p>
+                    <div class="stars">★★★★★</div>
+                  </div>
+                </li>
+        
+                <li class="splide__slide">
+                  <div class="slide-card">
+                    <img src="img/girl.png" alt="girl icon">
+                    <h3>Priya Sharma</h3>
+                    <p>Working with Zero2Logics was a pleasure. They understood our vision perfectly and created a website that aligns with our brand.</p>
+                    <div class="stars">★★★★☆</div>
+                  </div>
+                </li>
+        
+                <li class="splide__slide">
+                  <div class="slide-card">
+                    <img src="img/girl.png" alt="girl icon">
+                    <h3>Aisha Khan</h3>
+                    <p>Zero2Logics transformed our ideas into a beautiful, functional HTML website. The process was smooth, and the final product impressed everyone on our team.</p>
+                    <div class="stars">★★★★★</div>
+                  </div>
+                </li>
 
-        <div class="splide__track">
-          <ul class="splide__list">
-      
-            <li class="splide__slide">
-                <div class="card">
-              <span class="quote">“</span>
-              <img src="img/girl.png">
-              <h4>Shreya Joshi</h4>
-              <div class="stars">★★★★★</div>
-              <p>Zero2Logics delivered an outstanding website for us. Every detail, from layout to functionality, was handled flawlessly. Our visitors love it!</p>
-              </div>
-            </li>
-      
-            <li class="splide__slide">
-                <div class="card">
-              <span class="quote">“</span>
-              <img src="img/boy.png">
-              <h4>Arjun Mehta</h4>
-              <div class="stars">★★★★☆</div>
-              <p>The team at Zero2Logics exceeded our expectations. Our WordPress website is modern, fast, and fully responsive. Truly professional work!</p>
-            </div>
-            </li>
-      
-            <li class="splide__slide">
-                <div class="card">
-              <span class="quote">“</span>
-              <img src="img/girl.png">
-              <h4>Priya Sharma</h4>
-              <div class="stars">★★★★★</div>
-              <p>Working with Zero2Logics was a pleasure. They understood our vision perfectly and created a website that aligns with our brand.</p>
-            </div>
-            </li>
-      
-            <li class="splide__slide">
-                <div class="card">
-              <span class="quote">“</span>
-              <img src="img/girl.png">
-              <h4>Aisha Khan</h4>
-              <div class="stars">★★★★☆</div>
-              <p>Zero2Logics transformed our ideas into a beautiful, functional HTML website. The process was smooth, and the final product impressed everyone on our team.</p>
+
+                <li class="splide__slide">
+                    <div class="slide-card">
+                      <img src="img/girl.png" alt="girl icon">
+                      <h3>Harsh Agarwal</h3>
+                      <p>We wanted a website that stands out — and Zero2Logics delivered. The WordPress site is flawless, easy to manage, and visually stunning. Couldn’t be happier!</p>
+                    <div class="stars">★★★★★</div>
                     </div>
-            </li>
-      
-            <li class="splide__slide">
-                <div class="card">
-              <span class="quote">“</span>
-              <img src="img/boy.png">
-              <h4>Harsh Agarwal</h4>
-              <div class="stars">★★★★★</div>
-              <p>We wanted a website that stands out — and Zero2Logics delivered. The WordPress site is flawless, easy to manage, and visually stunning. Couldn’t be happier!</p>
+                  </li>
+        
+              </ul>
             </div>
-            </li>
-      
-          </ul>
+          </div>
         </div>
+    </div>   
       </section>
       <!-- ===end testimonial===== -->
 
 
       <!-- ====contact form ====== -->
 
-      <section class="contact-section">
+      <section id="contact" class="contact-section">
         <div class="container">
           <div class="row align-items-center">
             
@@ -174,25 +238,25 @@
       
               <div class="info-box">
                 <h5><i class="fa-solid fa-phone-volume"></i> &nbsp; Phone</h5>
-                <p><a href="tel:+919358574355">+91 9358574355</a></p>
+                <p><a href="tel:+919358574355">+91 9509188012</a></p>
               </div>
             </div>
       
             <!-- RIGHT SIDE: FORM -->
             <div class="col-sm-6 contact-form">
               <h3>Send Us a Message</h3>
-              <form>
+              <form id="contactForm">
                 <div class="mb-3">
-                  <input type="text" class="form-control" placeholder="Your Name" required>
+                  <input type="text" class="form-control" id="name" placeholder="Your Name" required>
                 </div>
                 <div class="mb-3">
-                  <input type="email" class="form-control" placeholder="Your Email" required>
+                  <input type="email" class="form-control" id="email" placeholder="Your Email" required>
                 </div>
                 <div class="mb-3">
-                  <input type="text" class="form-control" placeholder="Subject">
+                  <input type="text" class="form-control" id="subject" placeholder="Subject">
                 </div>
                 <div class="mb-3">
-                  <textarea class="form-control" placeholder="Your Message" rows="5"></textarea>
+                  <textarea class="form-control" id="message" placeholder="Your Message" rows="5"></textarea>
                 </div>
                 <button class="formbtn" type="submit">Send Message</button>
               </form>
@@ -214,26 +278,26 @@
                 <div class="col-sm-3 sec_ft">
                     <h2>Quick Links</h2>
                     <ul>
-                        <li href="">Home</li>
-                        <li href="">About Us</li>
-                        <li href="">Service</li>
-                        <li href="">Contact Us</li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3 thr_ft">
                     <h2>Get in Touch</h2>
                     <ul>
-                        <li><a href="tel:9358574355"><i class="fa-solid fa-phone-volume"></i>&nbsp; +91 9358574355</a></li>
+                        <li><a href="tel:9358574355"><i class="fa-solid fa-phone-volume"></i>&nbsp; +91 9509188012</a></li>
                         <li><a href="mailto:sharma.adi52was@gmail.com"><i class="fa-solid fa-envelope"></i>&nbsp; sharma.adi52was@gmail.com </a></li>
-                        <li><i class="fa-solid fa-location-dot"></i>&nbsp; near GeNext world school, Tonk Rd, Chokhi Dhani, Sanganer, Shri Ram Ki Nangal, Jaipur, Rajasthan 302022 </li>
+                        <li><i class="fa-solid fa-location-dot"></i>&nbsp; Near GeNext world school, Tonk Rd, Chokhi Dhani, Sanganer, Shri Ram Ki Nangal, Jaipur, Rajasthan 302022 </li>
                     </ul>
                 </div>
                 <div class="col-sm-3 for_ft">
                     <h2>Let’s Connect</h2>
                    <ul class="social">
-                    <li href=""><i class="fa-brands fa-facebook-f"></i></li>
-                    <li href=""><i class="fa-brands fa-instagram"></i></li>
-                    <li href=""><i class="fa-brands fa-linkedin-in"></i></li>
+                    <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
                     <li><a href="https://wa.me/9358574355" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
                    
                 </ul>
@@ -246,69 +310,10 @@
         </div>
       </section>
 
-      <script>
-        function openMenu() {
-          document.getElementById("mobileMenu").style.left = "0";
-        }
-    
-        function closeMenu() {
-          document.getElementById("mobileMenu").style.left = "-100%";
-        }
-      </script>
+      <script src="script.js"></script>
 
 
-<script>
-    const slides = document.querySelectorAll(".slide");
-    const nextBtn = document.querySelector(".next");
-    const prevBtn = document.querySelector(".prev");
-    
-    let current = 0;
-    
-    function showSlide(index) {
-      slides.forEach(slide => slide.classList.remove("active"));
-      slides[index].classList.add("active");
-    }
-    
-    // Next/Prev button functionality
-    nextBtn.onclick = () => {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    };
-    
-    prevBtn.onclick = () => {
-      current = (current - 1 + slides.length) % slides.length;
-      showSlide(current);
-    };
-    
-    // Auto-run slider every 3 seconds
-    setInterval(() => {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    }, 4000); // 3000ms = 3 seconds
-    </script>
-
-
-    <!-- =====testimonial -->
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
-
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          new Splide('#testimonial-slider', {
-            type: 'loop',
-            perPage: 3,
-            focus: 'center',
-            gap: '2rem',
-            autoplay: true,
-            interval: 300000000,
-            arrows: true,
-            pagination: false,
-            breakpoints: {
-              1024: { perPage: 2 },
-              768: { perPage: 1 }
-            }
-          }).mount();
-        });
-        </script>
+   
 
 
 </body>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Data Table</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Manrope' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    
+    <script>
+        const PASSWORD = "zero2logics@2026";
+        const userPass = prompt("Enter access password:");
+      
+        if (!userPass || userPass !== PASSWORD) {
+          alert("Access Denied");
+          window.location.replace("index.html");
+        }
+      </script>
+      
+
+</head>
+<body>
+    
+
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+            <img src="img/zero2logics.png">
+            <div class="menu-btn" onclick="openMenu()">☰</div>
+        </div>
+             <div class="col-sm-6">  
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#service">Service</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+        </div>
+
+        <div class="col-sm-3 butn"><a class="btn" href="tel:9509188012">Contact Us</a></div>
+    </div>
+    </div>
+      </header>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+        <a href="index.html" onclick="closeMenu()">Home</a>
+        <a href="#about" onclick="closeMenu()">About</a>
+        <a href="#service" onclick="closeMenu()">Services</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+      </div>
+    
+
+     
+
+      <!-- ===data==== -->
+
+      <h2>Saved Messages (Private)</h2>
+  <div id="data"></div>
+
+ 
+
+
+      <section class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3 fist_ft">
+                    <img src="img/zero2logics.png">
+                    <p> At Zero2Logics Transforming Ideas into Stunning Websites. We specialize in crafting innovative and reliable web solutions tailored just for you.</p>
+                </div>
+                <div class="col-sm-3 sec_ft">
+                    <h2>Quick Links</h2>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#service">Service</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 thr_ft">
+                    <h2>Get in Touch</h2>
+                    <ul>
+                        <li><a href="tel:9358574355"><i class="fa-solid fa-phone-volume"></i>&nbsp; +91 9509188012</a></li>
+                        <li><a href="mailto:sharma.adi52was@gmail.com"><i class="fa-solid fa-envelope"></i>&nbsp; sharma.adi52was@gmail.com </a></li>
+                        <li><i class="fa-solid fa-location-dot"></i>&nbsp; Near GeNext world school, Tonk Rd, Chokhi Dhani, Sanganer, Shri Ram Ki Nangal, Jaipur, Rajasthan 302022 </li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 for_ft">
+                    <h2>Let’s Connect</h2>
+                   <ul class="social">
+                    <li><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-linkedin-in"></i></a></li>
+                    <li><a href="https://wa.me/9358574355" target="_blank"><i class="fa-brands fa-whatsapp"></i></a></li>
+                   
+                </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="copiright">
+            <p>© Copyright Zero2logics || All Rights Reserved</p>
+        </div>
+      </section>
+
+
+      <script src="script.js"></script>
+<!-- 
+      <script>
+        function openMenu() {
+          document.getElementById("mobileMenu").style.left = "0";
+        }
+    
+        function closeMenu() {
+          document.getElementById("mobileMenu").style.left = "-100%";
+        }
+      </script>
+
+<script>
+    let messages = JSON.parse(localStorage.getItem("messages")) || [];
+    let container = document.getElementById("data");
+
+    if (messages.length === 0) {
+      container.innerHTML = "<p>No data found.</p>";
+    }
+
+    messages.forEach(msg => {
+      container.innerHTML += `
+        <div class="card">
+          <h3>${msg.name}</h3>
+          <p><strong>Email:</strong> ${msg.email}</p>
+          <p><strong>Subject:</strong> ${msg.subject}</p>
+          <p>${msg.message}</p>
+          <small>${msg.time}</small>
+          <button class="btn btn-sm btn-danger deleteBtn mt-2">Delete</button>
+        </div>
+      `;
+    });
+  </script>
+
+  <script>
+    // Get all delete buttons
+document.querySelectorAll(".deleteBtn").forEach(button => {
+  button.addEventListener("click", function() {
+    // Confirm deletion
+    if (!confirm("Are you sure you want to delete this message?")) return;
+
+    // Get parent card and its index
+    const card = this.closest(".card");
+    const index = parseInt(card.getAttribute("data-index"));
+
+    // Remove from localStorage array
+    let messages = JSON.parse(localStorage.getItem("messages")) || [];
+    messages.splice(index, 1); // remove 1 item at position 'index'
+    localStorage.setItem("messages", JSON.stringify(messages));
+
+    // Remove card from DOM
+    card.remove();
+
+    // Optional: show message if no data left
+    if (messages.length === 0) {
+      document.getElementById("data").innerHTML = "<p>No data found.</p>";
+    }
+  });
+});
+
+  </script> -->
+
+
+</body>
+</html>
