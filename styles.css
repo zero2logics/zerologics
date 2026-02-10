@@ -542,8 +542,17 @@ section#service .col-sm-12 img {
 body h4 {
   font-size: 20px;
 }
+
+section.hero-section h2 {
+  font-size: 54px;
+}
+
   /* ===== RESPONSIVE ===== */
   @media (max-width: 768px) {
+
+    section.hero-section h2 {
+      font-size: 30px;
+    }
     .nav {
       display: none;
     }
