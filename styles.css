@@ -547,6 +547,45 @@ section.hero-section h2 {
   font-size: 54px;
 }
 
+section.bannercls {
+  background-imgae: url(img/banner1.png);
+}
+
+
+
+element.style {
+}
+section.bannercls:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #010b17;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+section.bannercls h1 {
+  font-size: 48px;
+  letter-spacing: 1px;
+}
+
+section.bannercls {
+  background: url(img/banner2.png) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center;
+  height: 300px;
+  position: relative;
+  z-index: 1;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center;
+  color: #fff;
+}
   /* ===== RESPONSIVE ===== */
   @media (max-width: 768px) {
 
@@ -712,6 +751,19 @@ section#service .row {
 
 section#service .col-sm-12 img {
   width: 30%;
+}
+
+section.bannercls h1 {
+  font-size: 32px;
+  letter-spacing: 1px;
+}
+
+section.bannercls {
+  background: url(img/banner2.png) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center;
+  height: 200px;
 }
 
   }
