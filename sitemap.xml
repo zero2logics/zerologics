@@ -8,22 +8,22 @@
 
 
 <url>
-  <loc>https://zero2logics.github.io/zerologics/</loc>
+  <loc>https://webofficers.github.io</loc>
   
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://zero2logics.github.io/zerologics/index.html</loc>
+  <loc>https://webofficers.github.io/index.html</loc>
   
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://zero2logics.github.io/zerologics/services.html</loc>
+  <loc>https://webofficers.github.io/services.html</loc>
   
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://zero2logics.github.io/zerologics/contact-us.html</loc>
+  <loc>https://webofficers.github.io/contact-us.html</loc>
  
   <priority>0.80</priority>
 </url>
